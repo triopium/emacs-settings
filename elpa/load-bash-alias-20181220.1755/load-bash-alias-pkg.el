@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "load-bash-alias" "20181220.1755" "Convert bash aliases into eshell ones" '((emacs "24.1") (seq "2.16")) :commit "50df445bace7896318f10c58d26b673635704215" :keywords '("emacs" "bash" "eshell" "alias") :authors '(("Davide Restivo" . "davide.restivo@yahoo.it")) :maintainer '("Davide Restivo" . "davide.restivo@yahoo.it") :url "https://github.com/daviderestivo/load-bash-alias")
