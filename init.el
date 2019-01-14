@@ -90,7 +90,7 @@
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (airline-themes spaceline spaceline-all-the-icons spacemacs-theme inform-mode window-number web-search path-headerline-mode number-lock sunburn-theme px scrolloff smooth-scrolling readline-complete multi-term bash-completion better-shell company-shell eshell-manual flymake-shell gnome-calendar grandshell-theme load-bash-alias ace-popup-menu helm-backup backup-each-save col-highlight hl-spotlight crosshairs eagle-eye evil-commentary window-numbering evil-nerd-commenter evil-magit evil-collection zeno-theme rainbow-delimiters ample-zen-theme ample-theme backtrace-mode nova-theme pdf-tools quick-preview session tmux-pane flycheck-golangci-lint czech-holidays slack shell-here shell-pop shell-switcher shell-toggle slime company company-go auto-complete-exuberant-ctags go-add-tags go-playground-cli go-projectile godoctor goldendict monokai-alt-theme nav navi-mode ztree treemacs treemacs-evil treemacs-icons-dired treemacs-projectile eproject project-explorer neotree dict-tree dictcc dictionary dirtree dired-rifle dired-collapse download-region picpocket evil-lion evil-search-highlight-persist evil-numbers evil-opener evil-leader google-translate gorepl-mode govet go-rename go-stacktracer yasnippet-snippets go-snippets go-scratch go-imports go-imenu go-fill-struct go-dlv go-gopath go-direx gotham-theme go-complete go-autocomplete dired-ranger dired-rainbow color-theme-solarized dired-quick-sort dired-sidebar darkokai-theme doom-themes dired-launch diffview powerline-evil go-guru go-playground golint idea-darkula-theme solarized-theme evil-expat evil-smartparens evil-matchit evil-easymotion evil-better-visual-line evil-org evil-surround evil-rsi evil-terminal-cursor-changer ## evil)))
+    (exec-path-from-shell vdiff vdiff-magit xclip zenburn-theme zygospore zoom-window airline-themes spaceline spaceline-all-the-icons spacemacs-theme inform-mode window-number web-search path-headerline-mode number-lock sunburn-theme px scrolloff smooth-scrolling readline-complete multi-term bash-completion better-shell company-shell eshell-manual flymake-shell gnome-calendar grandshell-theme load-bash-alias ace-popup-menu helm-backup backup-each-save col-highlight hl-spotlight crosshairs eagle-eye evil-commentary window-numbering evil-nerd-commenter evil-magit evil-collection zeno-theme rainbow-delimiters ample-zen-theme ample-theme backtrace-mode nova-theme pdf-tools quick-preview session tmux-pane flycheck-golangci-lint czech-holidays slack shell-here shell-pop shell-switcher shell-toggle slime company company-go auto-complete-exuberant-ctags go-add-tags go-playground-cli go-projectile godoctor goldendict monokai-alt-theme nav navi-mode ztree treemacs treemacs-evil treemacs-icons-dired treemacs-projectile eproject project-explorer neotree dict-tree dictcc dictionary dirtree dired-rifle dired-collapse download-region picpocket evil-lion evil-search-highlight-persist evil-numbers evil-opener evil-leader google-translate gorepl-mode govet go-rename go-stacktracer yasnippet-snippets go-snippets go-scratch go-imports go-imenu go-fill-struct go-dlv go-gopath go-direx gotham-theme go-complete go-autocomplete dired-ranger dired-rainbow color-theme-solarized dired-quick-sort dired-sidebar darkokai-theme doom-themes dired-launch diffview powerline-evil go-guru go-playground golint idea-darkula-theme solarized-theme evil-expat evil-smartparens evil-matchit evil-easymotion evil-better-visual-line evil-org evil-surround evil-rsi evil-terminal-cursor-changer ## evil)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(show-paren-mode t)
@@ -127,7 +127,8 @@
  '(xterm-color-names
    ["#073642" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#eee8d5"])
  '(xterm-color-names-bright
-   ["#002b36" "#cb4b16" "#586e75" "#657b83" "#839496" "#6c71c4" "#93a1a1" "#fdf6e3"]))
+   ["#002b36" "#cb4b16" "#586e75" "#657b83" "#839496" "#6c71c4" "#93a1a1" "#fdf6e3"])
+ '(zoom-window-mode-line-color "DarkGreen"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -136,28 +137,70 @@
  '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 98 :width normal)))))
 
 ;; VI-MODE
+(setq evil-want-keybinding nil)
+(setq evil-collection-setup-minibuffer t)
+(setq evil-collection-term-sync-state-and-mode-p t)
+(setq evil-collection-setup-debugger-keys t)
 (require 'evil)
+(when (require 'evil-collection nil t)
+  (evil-collection-init))
+;;(global-set-key (kbd ":") 'execute-extended-command)
+;;(define-key evil-normal-state-map ":" 'execute-extended-command)
+
+(global-evil-leader-mode)
+(evil-leader/set-leader "<SPC>")
 (evil-mode 1)
 (evil-select-search-module 'evil-search-module 'evil-search)
-
+(evil-leader/set-key
+  "e" 'find-file
+  "k" 'kill-buffer
+  "x" 'shell-toggle
+  )
 
 ;; LINE-NUMBERS
 (global-linum-mode t)
 
 ;; WINDOW MANIPULATION
-(define-key evil-normal-state-map "\M-\S-k" 'shrink-window)
-(define-key evil-normal-state-map "\M-\S-j" 'enlarge-window)
-(define-key evil-normal-state-map "\M-\S-h" 'shrink-window-horizontally)
-(define-key evil-normal-state-map "\M-\S-l" 'enlarge-window-horizontally)
+;;(define-key evil-normal-state-map "\M-\S-k" 'shrink-window)
+;;(define-key evil-normal-state-map "\M-\S-j" 'enlarge-window)
+;;(define-key evil-normal-state-map "\M-\S-h" 'shrink-window-horizontally)
+;;(define-key evil-normal-state-map "\M-\S-l" 'enlarge-window-horizontally)
+;;
+;;(define-key evil-normal-state-map "\M-h" 'evil-window-left)
+;;(define-key evil-normal-state-map "\M-l" 'evil-window-right)
+;;(define-key evil-normal-state-map "\M-j" 'evil-window-down) (define-key evil-normal-state-map "\M-k" 'evil-window-up)
+
+(global-set-key "\M-\S-k" 'shrink-window)
+(global-set-key "\M-\S-j" 'enlarge-window)
+(global-set-key "\M-\S-h" 'shrink-window-horizontally)
+(global-set-key "\M-\S-l" 'enlarge-window-horizontally)
+
+(global-set-key "\M-k" 'evil-window-up)
+(global-set-key "\M-j" 'evil-window-down)
+(global-set-key "\M-h" 'evil-window-left)
+(global-set-key "\M-l" 'evil-window-right)
+
 (toggle-scroll-bar -1)
 (window-numbering-mode 1)
 (require 'window-number)
-(window-number-mode 1)
+;;(window-number-mode 1)
 (global-hl-line-mode 1)
 (menu-bar-mode -1)
 ;;(set-frame-parameter nil 'undecorated t) ;; EMACS 26
+(require 'zoom-window)
+;;(global-set-key (kbd "C-x C-z") 'zoom-window-zoom)
+(evil-leader/set-key
+  "z" 'zoom-window-zoom
+  )
 
-;;(require 'simple-mode-line)
+
+(global-set-key (kbd "M-+") 'select-window-1)
+(global-set-key (kbd "M-ě") 'select-window-2)
+(global-set-key (kbd "M-š") 'select-window-3)
+(global-set-key (kbd "M-č") 'select-window-4)
+(global-set-key (kbd "M-ř") 'select-window-5)
+(global-set-key (kbd "M-ž") 'select-window-6)
+
 
 ;;NEOTREE
 (setq neo-window-fixed-size nil)
@@ -175,7 +218,8 @@
       (define-key evil-normal-state-local-map (kbd "s") 'neotree-enter-vertical-split)
       (define-key evil-normal-state-local-map (kbd "S") 'neotree-enter-horizontal-split)
 
-      (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+      (define-key evil-normal-state-local-map (kbd "RET") 'neotree-quick-look)
+      (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)))
 
 
 ;; Set the neo-window-width to the current width of the
@@ -194,7 +238,7 @@
 
 ;;(require 'micgoline)
 
-;;POWERLINE
+;;POWERLINE, MODELINE
 ;;(require 'powerline)
 
 (require 'airline-themes)
@@ -222,6 +266,8 @@
       ;;spaceline-window-numbers-unicode t
       spaceline-line-column-p t
       spaceline-buffer-id-p nil
+	spaceline-minor-modes-p nil
+	spaceline-buffer-id-p t
       ;;spaceline-minor-modes-separator-p t 
 	  )
       (powerline-reset)
@@ -308,6 +354,10 @@
 ;;(define-key evil-normal-state-map "\S-return" 'go-guru-referrers)
 (define-key evil-normal-state-map [M-return] 'go-guru-referrers)
 
+(setq scroll-conservatively 101) ;; move minimum when cursor exits view, instead of recentering
+(setq mouse-wheel-scroll-amount '(1)) ;; mouse scroll moves 1 line at a time, instead of 5 lines
+(setq mouse-wheel-progressive-speed nil) ;; on a long mouse scroll keep scrolling by 1 line
+
 ;;COMMENT
 (define-key evil-normal-state-map "ů" 'comment-line)
 (define-key evil-normal-state-map "§" 'comment-dwim)
@@ -329,4 +379,17 @@
                     :height 140
 					)
 
+
+
+;; escape quits
+;;(bind-key "<escape>" 'isearch-cancel isearch-mode-map)
+(define-key minibuffer-local-map (kbd "ESC") 'abort-recursive-edit)
+(define-key minibuffer-local-ns-map (kbd "ESC") 'abort-recursive-edit)
+(define-key minibuffer-local-completion-map (kbd "ESC") 'abort-recursive-edit)
+(define-key minibuffer-local-must-match-map (kbd "ESC") 'abort-recursive-edit)
+(define-key minibuffer-local-isearch-map (kbd "ESC") 'abort-recursive-edit)
+;;(bind-key "<escape>" 'helm-keyboard-quit helm-map)
+;;(bind-key "<escape>" 'helm-keyboard-quit helm-comp-read-map)
+
+(evilem-default-keybindings "SPC")
 (package-initialize)
