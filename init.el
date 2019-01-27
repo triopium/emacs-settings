@@ -90,7 +90,7 @@
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell vdiff vdiff-magit xclip zenburn-theme zygospore zoom-window airline-themes spaceline spaceline-all-the-icons spacemacs-theme inform-mode window-number web-search path-headerline-mode number-lock sunburn-theme px scrolloff smooth-scrolling readline-complete multi-term bash-completion better-shell company-shell eshell-manual flymake-shell gnome-calendar grandshell-theme load-bash-alias ace-popup-menu helm-backup backup-each-save col-highlight hl-spotlight crosshairs eagle-eye evil-commentary window-numbering evil-nerd-commenter evil-magit evil-collection zeno-theme rainbow-delimiters ample-zen-theme ample-theme backtrace-mode nova-theme pdf-tools quick-preview session tmux-pane flycheck-golangci-lint czech-holidays slack shell-here shell-pop shell-switcher shell-toggle slime company company-go auto-complete-exuberant-ctags go-add-tags go-playground-cli go-projectile godoctor goldendict monokai-alt-theme nav navi-mode ztree treemacs treemacs-evil treemacs-icons-dired treemacs-projectile eproject project-explorer neotree dict-tree dictcc dictionary dirtree dired-rifle dired-collapse download-region picpocket evil-lion evil-search-highlight-persist evil-numbers evil-opener evil-leader google-translate gorepl-mode govet go-rename go-stacktracer yasnippet-snippets go-snippets go-scratch go-imports go-imenu go-fill-struct go-dlv go-gopath go-direx gotham-theme go-complete go-autocomplete dired-ranger dired-rainbow color-theme-solarized dired-quick-sort dired-sidebar darkokai-theme doom-themes dired-launch diffview powerline-evil go-guru go-playground golint idea-darkula-theme solarized-theme evil-expat evil-smartparens evil-matchit evil-easymotion evil-better-visual-line evil-org evil-surround evil-rsi evil-terminal-cursor-changer ## evil)))
+    (ewmctrl exec-path-from-shell vdiff vdiff-magit xclip zenburn-theme zygospore zoom-window airline-themes spaceline spaceline-all-the-icons spacemacs-theme inform-mode window-number web-search path-headerline-mode number-lock sunburn-theme px scrolloff smooth-scrolling readline-complete multi-term bash-completion better-shell company-shell eshell-manual flymake-shell gnome-calendar grandshell-theme load-bash-alias ace-popup-menu helm-backup backup-each-save col-highlight hl-spotlight crosshairs eagle-eye evil-commentary window-numbering evil-nerd-commenter evil-magit evil-collection zeno-theme rainbow-delimiters ample-zen-theme ample-theme backtrace-mode nova-theme pdf-tools quick-preview session tmux-pane flycheck-golangci-lint czech-holidays slack shell-here shell-pop shell-switcher shell-toggle slime company company-go auto-complete-exuberant-ctags go-add-tags go-playground-cli go-projectile godoctor goldendict monokai-alt-theme nav navi-mode ztree treemacs treemacs-evil treemacs-icons-dired treemacs-projectile eproject project-explorer neotree dict-tree dictcc dictionary dirtree dired-rifle dired-collapse download-region picpocket evil-lion evil-search-highlight-persist evil-numbers evil-opener evil-leader google-translate gorepl-mode govet go-rename go-stacktracer yasnippet-snippets go-snippets go-scratch go-imports go-imenu go-fill-struct go-dlv go-gopath go-direx gotham-theme go-complete go-autocomplete dired-ranger dired-rainbow color-theme-solarized dired-quick-sort dired-sidebar darkokai-theme doom-themes dired-launch diffview powerline-evil go-guru go-playground golint idea-darkula-theme solarized-theme evil-expat evil-smartparens evil-matchit evil-easymotion evil-better-visual-line evil-org evil-surround evil-rsi evil-terminal-cursor-changer ## evil)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(show-paren-mode t)
@@ -272,8 +272,13 @@
 	  )
       (powerline-reset)
 
+;;HEADER
 (path-headerline-mode 1)
-(setq frame-title-format "%b")
+;;(setq frame-title-format "%b")
+;;(setq frame-title-format (list "" (shell-command-to-string "basename  $GOPATH") "@" (getenv "USERDOMAIN")))
+;;(setq frame-title-format (list (shell-command-to-string "basename  $GOPATH")))
+(setq frame-title-format (list (shell-command-to-string "basename $PWD")))
+
 
 ;;(load-theme 'solarized-dark)
 ;;(require 'smart-mode-line)
@@ -286,7 +291,16 @@
 ;;GOLANG
 (defun go-mode-setup ()
   (go-eldoc-setup))
- 
+
+;;GO autocompletion
+;; 
+;;(defun auto-complete-for-go ()
+;;  (auto-complete-mode 1))
+;;(add-hook 'go-mode-hook 'auto-complete-for-go)
+;;(with-eval-after-load 'go-mode
+;;   (require 'go-autocomplete))
+
+;; GO company settings 
 (add-hook 'go-mode-hook 'go-mode-setup)
 (require 'auto-complete-config)
 (require 'go-autocomplete)
@@ -300,11 +314,13 @@
 (add-hook 'go-mode-hook (lambda ()
                           (set (make-local-variable 'company-backends) '(company-go))
                           (company-mode)))
+
+
 (setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 (require 'go-gopath)
-;;(define-key go-mode-map (kbd "C-c C-e") #'go-gopath-set-gopath)
+;(define-key go-mode-map (kbd "C-c C-e") #'go-gopath-set-gopath)
 
 ;;GOLANG COMPILE
 (defun my-go-mode-hook ()
@@ -324,6 +340,7 @@
 (eval-after-load 'flycheck
       '(add-hook 'flycheck-mode-hook #'flycheck-golangci-lint-setup))
 (global-flycheck-mode 1)
+(setq flycheck-check-syntax-automatically '(mode-enabled save))
 
 ;;PARENS
 (show-paren-mode 1)
@@ -334,9 +351,6 @@
 (require 'quick-preview)
 (setq quick-preview-method 'gnome-sushi)
 
-;;FONT SIZE
-(define-key evil-normal-state-map "+" 'text-scale-increase)
-(define-key evil-normal-state-map "-" 'text-scale-decrease)
 
 
 ;;MODES
@@ -357,6 +371,9 @@
 (setq scroll-conservatively 101) ;; move minimum when cursor exits view, instead of recentering
 (setq mouse-wheel-scroll-amount '(1)) ;; mouse scroll moves 1 line at a time, instead of 5 lines
 (setq mouse-wheel-progressive-speed nil) ;; on a long mouse scroll keep scrolling by 1 line
+
+;;SESSION
+;;(desktop-save-mode 1)
 
 ;;COMMENT
 (define-key evil-normal-state-map "ů" 'comment-line)
@@ -390,6 +407,10 @@
 (define-key minibuffer-local-isearch-map (kbd "ESC") 'abort-recursive-edit)
 ;;(bind-key "<escape>" 'helm-keyboard-quit helm-map)
 ;;(bind-key "<escape>" 'helm-keyboard-quit helm-comp-read-map)
+
+;;FONT SIZE
+(define-key evil-normal-state-map "+" 'text-scale-increase)
+(define-key evil-normal-state-map "-" 'text-scale-decrease)
 
 (evilem-default-keybindings "SPC")
 (package-initialize)

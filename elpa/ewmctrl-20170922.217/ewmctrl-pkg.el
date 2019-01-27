@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "ewmctrl" "20170922.217" "Use `wmctrl' to manage desktop windows via EWMH/NetWM." 'nil :commit "3d0217c4d6cdb5c308b6cb4293574f470d4faacf" :keywords '("desktop" "windows" "ewmh" "netwm") :authors '(("Alexis" . "flexibeast@gmail.com") ("Adam Plaice" . "plaice.adam@gmail.com")) :maintainer '("Alexis" . "flexibeast@gmail.com") :url "https://github.com/flexibeast/ewmctrl")
