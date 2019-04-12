@@ -58,6 +58,7 @@
  '(custom-safe-themes
    (quote
     ("36ca8f60565af20ef4f30783aa16a26d96c02df7b4e54e9900a5138fb33808da" "c14738d25ebbd4e8ae637ef5d52d60247a576b9cfb3f916d32a66e8725cc8173" "3fa07dd06f4aff80df2d820084db9ecbc007541ce7f15474f1d956c846a3238f" "b563a87aa29096e0b2e38889f7a5e3babde9982262181b65de9ce8b78e9324d5" "e7b49145d311e86da34a32a7e1f73497fa365110a813d2ecd8105eaa551969da" "08a89acffece58825e75479333109e01438650d27661b29212e6560070b156cf" "420689cc31d01fe04b8e3adef87b8838ff52faa169e69ca4e863143ae9f3a9f9" "cd7ffd461946d2a644af8013d529870ea0761dccec33ac5c51a7aaeadec861c2" "cf284fac2a56d242ace50b6d2c438fcc6b4090137f1631e32bedf19495124600" "228c0559991fb3af427a6fa4f3a3ad51f905e20f481c697c6ca978c5683ebf43" "8d5f22f7dfd3b2e4fc2f2da46ee71065a9474d0ac726b98f647bc3c7e39f2819" "66aea5b7326cf4117d63c6694822deeca10a03b98135aaaddb40af99430ea237" "a94f1a015878c5f00afab321e4fef124b2fc3b823c8ddd89d360d710fc2bddfc" "0cd56f8cd78d12fc6ead32915e1c4963ba2039890700458c13e12038ec40f6f5" "de0b7245463d92cba3362ec9fe0142f54d2bf929f971a8cdf33c0bf995250bcf" "3eb93cd9a0da0f3e86b5d932ac0e3b5f0f50de7a0b805d4eb1f67782e9eb67a4" "251348dcb797a6ea63bbfe3be4951728e085ac08eee83def071e4d2e3211acc3" "d61f6c49e5db58533d4543e33203fd1c41a316eddb0b18a44e0ce428da86ef98" "1b27e3b3fce73b72725f3f7f040fd03081b576b1ce8bbdfcb0212920aec190ad" "721bb3cb432bb6be7c58be27d583814e9c56806c06b4077797074b009f322509" "946e871c780b159c4bb9f580537e5d2f7dba1411143194447604ecbaf01bd90c" "af717ca36fe8b44909c984669ee0de8dd8c43df656be67a50a1cf89ee41bde9a" "9b1c580339183a8661a84f5864a6c363260c80136bd20ac9f00d7e1d662e936a" "256a381a0471ad344e1ed33470e4c28b35fb4489a67eb821181e35f080083c36" "01e067188b0b53325fc0a1c6e06643d7e52bc16b6653de2926a480861ad5aa78" "c79c2eadd3721e92e42d2fefc756eef8c7d248f9edefd57c4887fbf68f0a17af" "158013ec40a6e2844dbda340dbabda6e179a53e0aea04a4d383d69c329fba6e6" "2b8dff32b9018d88e24044eb60d8f3829bd6bbeab754e70799b78593af1c3aba" "b181ea0cc32303da7f9227361bb051bbb6c3105bb4f386ca22a06db319b08882" "da538070dddb68d64ef6743271a26efd47fbc17b52cc6526d932b9793f92b718" "003a9aa9e4acb50001a006cfde61a6c3012d373c4763b48ceb9d523ceba66829" "73a13a70fd111a6cd47f3d4be2260b1e4b717dbf635a9caee6442c949fad41cd" "d21135150e22e58f8c656ec04530872831baebf5a1c3688030d119c114233c24" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "8db4b03b9ae654d4a57804286eb3e332725c84d7cdab38463cb6b97d5762ad26" "b59d7adea7873d58160d368d42828e7ac670340f11f36f67fa8071dbf957236a" default)))
+ '(excorporate-configuration (quote ("" . "")))
  '(fci-rule-color "dark green")
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
  '(highlight-symbol-colors
@@ -90,7 +91,7 @@
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(package-selected-packages
    (quote
-    (ewmctrl exec-path-from-shell vdiff vdiff-magit xclip zenburn-theme zygospore zoom-window airline-themes spaceline spaceline-all-the-icons spacemacs-theme inform-mode window-number web-search path-headerline-mode number-lock sunburn-theme px scrolloff smooth-scrolling readline-complete multi-term bash-completion better-shell company-shell eshell-manual flymake-shell gnome-calendar grandshell-theme load-bash-alias ace-popup-menu helm-backup backup-each-save col-highlight hl-spotlight crosshairs eagle-eye evil-commentary window-numbering evil-nerd-commenter evil-magit evil-collection zeno-theme rainbow-delimiters ample-zen-theme ample-theme backtrace-mode nova-theme pdf-tools quick-preview session tmux-pane flycheck-golangci-lint czech-holidays slack shell-here shell-pop shell-switcher shell-toggle slime company company-go auto-complete-exuberant-ctags go-add-tags go-playground-cli go-projectile godoctor goldendict monokai-alt-theme nav navi-mode ztree treemacs treemacs-evil treemacs-icons-dired treemacs-projectile eproject project-explorer neotree dict-tree dictcc dictionary dirtree dired-rifle dired-collapse download-region picpocket evil-lion evil-search-highlight-persist evil-numbers evil-opener evil-leader google-translate gorepl-mode govet go-rename go-stacktracer yasnippet-snippets go-snippets go-scratch go-imports go-imenu go-fill-struct go-dlv go-gopath go-direx gotham-theme go-complete go-autocomplete dired-ranger dired-rainbow color-theme-solarized dired-quick-sort dired-sidebar darkokai-theme doom-themes dired-launch diffview powerline-evil go-guru go-playground golint idea-darkula-theme solarized-theme evil-expat evil-smartparens evil-matchit evil-easymotion evil-better-visual-line evil-org evil-surround evil-rsi evil-terminal-cursor-changer ## evil)))
+    (evil-mu4e mu4e-alert mu4e-conversation excorporate mutt-mode company-jedi docker docker-api docker-compose-mode dockerfile-mode grep-a-lot fiplr xah-find yoshi-theme zerodark-theme restclient json-mode zweilight-theme srcery-theme ewmctrl exec-path-from-shell vdiff vdiff-magit xclip zenburn-theme zygospore zoom-window airline-themes spaceline spaceline-all-the-icons spacemacs-theme inform-mode window-number web-search path-headerline-mode number-lock sunburn-theme px scrolloff smooth-scrolling readline-complete multi-term bash-completion better-shell company-shell eshell-manual flymake-shell gnome-calendar grandshell-theme load-bash-alias ace-popup-menu helm-backup backup-each-save col-highlight hl-spotlight crosshairs eagle-eye evil-commentary window-numbering evil-nerd-commenter evil-magit evil-collection zeno-theme rainbow-delimiters ample-zen-theme ample-theme backtrace-mode nova-theme pdf-tools quick-preview session tmux-pane flycheck-golangci-lint czech-holidays slack shell-here shell-pop shell-switcher shell-toggle slime company company-go auto-complete-exuberant-ctags go-add-tags go-playground-cli go-projectile godoctor goldendict monokai-alt-theme nav navi-mode ztree treemacs treemacs-evil treemacs-icons-dired treemacs-projectile eproject project-explorer neotree dict-tree dictcc dictionary dirtree dired-rifle dired-collapse download-region picpocket evil-lion evil-search-highlight-persist evil-numbers evil-opener evil-leader google-translate gorepl-mode govet go-rename go-stacktracer yasnippet-snippets go-snippets go-scratch go-imports go-imenu go-fill-struct go-dlv go-gopath go-direx gotham-theme go-complete go-autocomplete dired-ranger dired-rainbow color-theme-solarized dired-quick-sort dired-sidebar darkokai-theme doom-themes dired-launch diffview powerline-evil go-guru go-playground golint idea-darkula-theme solarized-theme evil-expat evil-smartparens evil-matchit evil-easymotion evil-better-visual-line evil-org evil-surround evil-rsi evil-terminal-cursor-changer ## evil)))
  '(pos-tip-background-color "#073642")
  '(pos-tip-foreground-color "#93a1a1")
  '(show-paren-mode t)
@@ -155,6 +156,8 @@
   "e" 'find-file
   "k" 'kill-buffer
   "x" 'shell-toggle
+  "j" 'evil-avy-goto-char
+  "w" 'ewmctrl
   )
 
 ;; LINE-NUMBERS
@@ -204,6 +207,7 @@
 
 ;;NEOTREE
 (setq neo-window-fixed-size nil)
+;;(setq-default neo-show-hidden-files t)
 (setq projectile-switch-project-action 'neotree-projectile-action)
   (add-hook 'neotree-mode-hook
     (lambda ()
@@ -315,9 +319,9 @@
                           (set (make-local-variable 'company-backends) '(company-go))
                           (company-mode)))
 
-
+;;GOIMPORTS AND GOFMT
 (setq gofmt-command "goimports")
-(add-hook 'before-save-hook 'gofmt-before-save)
+;;(add-hook 'before-save-hook 'gofmt-before-save)
 
 (require 'go-gopath)
 ;(define-key go-mode-map (kbd "C-c C-e") #'go-gopath-set-gopath)
@@ -342,6 +346,15 @@
 (global-flycheck-mode 1)
 (setq flycheck-check-syntax-automatically '(mode-enabled save))
 
+;; PYTHON
+
+ (add-to-list 'company-backends 'company-jedi)
+ ;; Advanced usage.
+ (add-to-list 'company-backends '(company-jedi company-files))
+;;(autoload 'jedi:setup "jedi" nil t)
+;;(add-hook 'python-mode-hook 'jedi:setup)
+;;(setq jedi:complete-on-dot t)
+
 ;;PARENS
 (show-paren-mode 1)
 (setq show-paren-delay 0)
@@ -364,9 +377,11 @@
 (define-key evil-visual-state-map "k" 'evil-previous-visual-line)
 (smooth-scrolling-mode)
 
-(define-key evil-normal-state-map "\C-m" 'godef-jump)
+;;(require 'go-mode)
+;;(define-key go-mode (kbd "\C-m") 'godef-jump)
+;;(define-key evil-normal-state-map "\C-m" 'godef-jump)
 ;;(define-key evil-normal-state-map "\S-return" 'go-guru-referrers)
-(define-key evil-normal-state-map [M-return] 'go-guru-referrers)
+;;(define-key evil-normal-state-map [M-return] 'go-guru-referrers)
 
 (setq scroll-conservatively 101) ;; move minimum when cursor exits view, instead of recentering
 (setq mouse-wheel-scroll-amount '(1)) ;; mouse scroll moves 1 line at a time, instead of 5 lines
@@ -396,6 +411,26 @@
                     :height 140
 					)
 
+;; MUTT MAIL
+;;(server-start)
+;;(add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
+
+;; MU4E
+;; example configuration for mu4e
+;;(require 'mu4e)
+;;;; use mu4e for e-mail in emacs
+;;(setq mail-user-agent 'mu4e-user-agent)
+;;;; path to our Maildir directory
+;;(setq mu4e-maildir "/home/user/Maildir")
+;;;; the next are relative to `mu4e-maildir'
+;;;; instead of strings, they can be functions too, see
+;;;; their docstring or the chapter 'Dynamic folders'
+;;(setq mu4e-sent-folder   "/sent"
+;;      mu4e-drafts-folder "/drafts"
+;;      mu4e-trash-folder  "/trash")
+;;;; a  list of user's e-mail addresses
+;;(setq mu4e-user-mail-address-list '("kacabaj@eltodo.cz")
+;;(setq mu4e-get-mail-command "offlineimap")
 
 
 ;; escape quits
@@ -411,6 +446,48 @@
 ;;FONT SIZE
 (define-key evil-normal-state-map "+" 'text-scale-increase)
 (define-key evil-normal-state-map "-" 'text-scale-decrease)
+
+;; MAGIT
+(setq evil-magit-state 'motion)
+(require 'evil-magit)
+
+;; EWMCTRL
+(defun my-focuser()
+  	(interactive)
+  	(ewmctrl-focus-window)
+	(quit-window)
+  )
+
+
+(eval-after-load 'ewmctrl
+  '(progn
+     (defvar ewmctrl-mode-map)
+     (evil-make-overriding-map ewmctrl-mode-map 'normal)
+	 ;;(define-key ewmctrl-mode-map "a" 'my-focuser)
+	 (define-key ewmctrl-mode-map [return] 'my-focuser)
+	 (define-key ewmctrl-mode-map "c" 'ewmctrl-change-window-name)
+	 (define-key ewmctrl-mode-map "C" 'ewmctrl-change-window-icon-name)
+	 (define-key ewmctrl-mode-map "r" 'ewmctrl-refresh)
+	 (define-key ewmctrl-mode-map "n" 'evil-ex-search-next)
+	 (define-key ewmctrl-mode-map "N" 'evil-ex-search-previous)
+	 (define-key ewmctrl-mode-map "/" 'evil-ex-search-forward)
+	 (define-key ewmctrl-mode-map "?" 'evil-ex-search-backward)
+     ;;(evil-define-key 'normal ewmctrl-mode-map "RET" 'my-focuser)
+	 )
+  )
+
+(define-key evil-normal-state-map "\C-m" 'godef-jump)
+(define-key evil-normal-state-map [M-return] 'go-guru-referrers)
+
+(eval-after-load 'Go
+  '(progn
+    ;;(defvar go-mode-map)
+    ;;(evil-make-overriding-map go-mode-map 'normal)
+	;;(define-key go-mode-map [M-return] 'go-guru-referrers)
+	;;(define-key go "a" 'godef-jump)
+    ;;(evil-make-overriding-map Go-mode-map 'normal)
+	)
+  )
 
 (evilem-default-keybindings "SPC")
 (package-initialize)

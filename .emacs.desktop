@@ -1,0 +1,115 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sat Jan 26 00:45:53 2019
+;; Desktop file format version 208
+;; Emacs version 25.2.2
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (23627 40881 791829 685000) (desktop . "208") "kacabaj@l548" nil nil ((((font-backend xft x) (font . "-DAMA-Ubuntu Mono-normal-normal-normal-*-19-*-*-*-m-0-iso10646-1") (font-parameter) (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#839496") (background-color . "#002b36") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (scroll-bar-foreground) (scroll-bar-background) (menu-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (alpha) (fullscreen . fullheight) (display-type . color) (background-mode . dark) (cursor-color . "#8a8a8a") (sticky) (environment) (powerline-cache) (frameset--id . "FDE1-DF35-5C68-0CA2") (frameset--mini t . t) (height . 51) (width . 93) (modeline . t) (minibuffer . t) (unsplittable) (left . 954) (top . 0) (icon-name) (visibility . t) (display . ":0") (explicit-name)) ((min-height . 8) (min-width . 20) (min-height-ignore . 8) (min-width-ignore . 11) (min-height-safe . 2) (min-width-safe . 4) (min-pixel-height . 160) (min-pixel-width . 200) (min-pixel-height-ignore . 160) (min-pixel-width-ignore . 110) (min-pixel-height-safe . 40) (min-pixel-width-safe . 40)) hc (pixel-width . 952) (pixel-height . 1014) (total-width . 95) (total-height . 51) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 200) (pixel-height . 1014) (total-width . 20) (total-height . 51) (normal-height . 1.0) (normal-width . 0.20588235294117654) (buffer " *NeoTree*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated . t) (point . 29) (start . 1))) (vc (last . t) (pixel-width . 752) (pixel-height . 1014) (total-width . 75) (total-height . 51) (normal-height . 1.0) (normal-width . 0.7941176470588233) (combination-limit) (leaf (pixel-width . 752) (pixel-height . 694) (total-width . 75) (total-height . 35) (normal-height . 0.6775147928994082) (normal-width . 1.0) (buffer "genmess.go" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins 3) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 5670) (start . 5182))) (leaf (last . t) (pixel-width . 752) (pixel-height . 320) (total-width . 75) (total-height . 16) (normal-height . 0.3224852071005918) (normal-width . 1.0) (buffer "*ansi-term*" (selected) (hscroll . 0) (fringes 8 8 nil) (margins 2) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 685) (start . 350))))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.emacs.d/" "~/Gop/afdsim"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/kacabaj/Gop/afdsim/src/afdsim/alib/genmess.go"
+  "genmess.go"
+  'go-mode
+  '(eldoc-mode undo-tree-mode linum-mode company-mode flycheck-mode evil-commentary-mode rainbow-delimiters-mode)
+  5670
+  '(2600 nil)
+  nil
+  nil
+  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (2753 336))))
+
+(desktop-create-buffer 208
+  "/home/kacabaj/Gop/afdsim/src/afdsim/main.go"
+  "main.go"
+  'go-mode
+  '(eldoc-mode undo-tree-mode linum-mode company-mode flycheck-mode evil-commentary-mode rainbow-delimiters-mode)
+  31
+  '(3851 nil)
+  nil
+  nil
+  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring (286 286 81 81 81 81))))
+
+(desktop-create-buffer 208
+  "/home/kacabaj/Gop/afdsim/src/afdsim/vendor/git.eltoversum.cz/StrategickyRozvoj/citidea/helper_function.git/shorthands.go"
+  "shorthands.go"
+  'go-mode
+  '(eldoc-mode undo-tree-mode linum-mode company-mode flycheck-mode evil-commentary-mode rainbow-delimiters-mode)
+  3252
+  '(3252 nil)
+  nil
+  nil
+  '((indent-tabs-mode . t) (buffer-file-coding-system . undecided-unix) (overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "helper_function.git"
+  'dired-mode
+  '(linum-mode evil-commentary-mode)
+  311
+  '(311 nil)
+  t
+  '("/home/kacabaj/Gop/afdsim/src/afdsim/vendor/git.eltoversum.cz/StrategickyRozvoj/citidea/helper_function.git/")
+  '((overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "elgolog.git"
+  'dired-mode
+  '(linum-mode evil-commentary-mode)
+  365
+  '(365 nil)
+  t
+  '("/home/kacabaj/Gop/afdsim/src/afdsim/vendor/git.eltoversum.cz/StrategickyRozvoj/citidea/elgolog.git/")
+  '((overwrite-mode))
+  '((mark-ring (365))))
+
+(desktop-create-buffer 208
+  nil
+  "afdsim"
+  'dired-mode
+  '(linum-mode evil-commentary-mode)
+  294
+  '(294 nil)
+  t
+  '("/home/kacabaj/Gop/afdsim/src/afdsim/")
+  '((overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "src"
+  'dired-mode
+  '(linum-mode evil-commentary-mode)
+  233
+  '(233 nil)
+  t
+  '("/home/kacabaj/Gop/afdsim/src/")
+  '((overwrite-mode))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  nil
+  "afdsim"
+  'dired-mode
+  '(linum-mode evil-commentary-mode)
+  459
+  '(459 nil)
+  t
+  '("/home/kacabaj/Gop/afdsim/")
+  '((overwrite-mode))
+  '((mark-ring (232 232))))
+

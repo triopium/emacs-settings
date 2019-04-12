@@ -1,8 +1,0 @@
-/home/kacabaj/Gop/helper_function/shorthands.go
-/home/kacabaj/Gop/helper_function/#shorthands.go#
-/home/kacabaj/Gop/helper_function/godef: error finding import path for git.eltoversum.cz/StrategickyRozvoj/citidea/elgolog.git: cannot find package "git.eltoversum.cz/StrategickyRozvoj/citidea/elgolog.git" in any of:
-/home/kacabaj/Gop/helper_function/godef: error finding import path for git.eltoversum.cz/StrategickyRozvoj/citidea/elgolog.git: cannot find package "git.eltoversum.cz/StrategickyRozvoj/citidea/#elgolog.git" in any of:#
-/usr/local/go/src/net/udpsock.go
-/usr/local/go/src/net/#udpsock.go#
-/usr/local/go/src/net/net.go
-/usr/local/go/src/net/#net.go#

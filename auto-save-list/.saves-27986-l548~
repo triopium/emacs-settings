@@ -1,0 +1,4 @@
+/home/kacabaj/Gop/auxlib/shorthands.go
+/home/kacabaj/Gop/auxlib/#shorthands.go#
+/home/kacabaj/Gop/auxlib/godef: error finding import path for git.eltoversum.cz/StrategickyRozvoj/citidea/elgolog.git: cannot find package "git.eltoversum.cz/StrategickyRozvoj/citidea/elgolog.git" in any of:
+/home/kacabaj/Gop/auxlib/godef: error finding import path for git.eltoversum.cz/StrategickyRozvoj/citidea/elgolog.git: cannot find package "git.eltoversum.cz/StrategickyRozvoj/citidea/#elgolog.git" in any of:#
